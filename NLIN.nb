@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    136494,       3632]
-NotebookOptionsPosition[    132978,       3510]
-NotebookOutlinePosition[    133350,       3526]
-CellTagsIndexPosition[    133307,       3523]
+NotebookDataLength[    168817,       4587]
+NotebookOptionsPosition[    164962,       4454]
+NotebookOutlinePosition[    165315,       4470]
+CellTagsIndexPosition[    165272,       4467]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -27,6 +27,11 @@ Cell[CellGroupData[{
 
 Cell["Introduction", "Chapter",
  CellChangeTimes->{{3.683906575488614*^9, 3.683906579656621*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["hamiltonian", "Subsection",
+ CellChangeTimes->{{3.6847417764192142`*^9, 3.6847417801310043`*^9}}],
 
 Cell[TextData[{
  "I suspect there is a phenomenon of secular terms in the perturbation theory \
@@ -801,7 +806,942 @@ is\n",
    3.683969383146098*^9}, {3.683969741464386*^9, 3.683969809807997*^9}, {
    3.683969879554327*^9, 3.683969881482318*^9}, {3.683969950158291*^9, 
    3.683970164052277*^9}, {3.6839702328245387`*^9, 3.683970233102126*^9}, {
-   3.6839787135794964`*^9, 3.683978715061474*^9}}]
+   3.6839787135794964`*^9, 3.683978715061474*^9}, {3.684731202153756*^9, 
+   3.6847312026656103`*^9}, {3.684741751898746*^9, 3.6847417521076107`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["more conserved charges", "Subsection",
+ CellChangeTimes->{{3.6847417764192142`*^9, 3.6847417983667107`*^9}}],
+
+Cell[TextData[{
+ "The NLS equation also has symmetry under the transformations:\n1. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", 
+     RowBox[{"t", ",", "z"}], ")"}], "\[Rule]", 
+    RowBox[{"Au", "(", 
+     RowBox[{"At", ",", 
+      RowBox[{
+       SuperscriptBox["A", "2"], "z"}]}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n2. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", 
+     RowBox[{"t", ",", "z"}], ")"}], "\[Rule]", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      RowBox[{
+       RowBox[{"t", "+", "\[CapitalOmega]z"}], ",", "z"}], ")"}], 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", 
+       RowBox[{"\[ImaginaryI]", "(", 
+        RowBox[{"\[CapitalOmega]t", "+", 
+         RowBox[{
+          SuperscriptBox["\[CapitalOmega]", "2"], 
+          RowBox[{"z", "/", "2"}]}]}], ")"}]}]]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nThe associated Noether currents are:"
+}], "Text",
+ CellChangeTimes->{{3.684741807159689*^9, 3.684741958657797*^9}, {
+  3.684742006260963*^9, 3.6847420229058847`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["1.", "Subsubsection",
+ CellChangeTimes->{{3.684742082298517*^9, 3.68474208237906*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[ScriptCapitalL]", "'"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "2"], 
+       SuperscriptBox["\[Gamma]A", "4"]}], "|", "u", 
+      SuperscriptBox["|", "2"], "|", "u", 
+      SuperscriptBox["|", "2"], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"+", 
+         SuperscriptBox["A", "2"]}], 
+        SuperscriptBox["A", "2"], 
+        SuperscriptBox["\[ImaginaryI]u", "*"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "u"}], 
+         RowBox[{"\[PartialD]", "z"}]]}], "+", 
+       RowBox[{
+        FractionBox["1", "2"], 
+        SuperscriptBox["A", "2"], 
+        SuperscriptBox["A", "2"], 
+        RowBox[{"\[Beta]", "''"}], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "u"}], 
+         RowBox[{"\[PartialD]", "t"}]], 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          SuperscriptBox["u", "*"]}], 
+         RowBox[{"\[PartialD]", "t"}]]}]}]}], "=", 
+     RowBox[{
+      SuperscriptBox["A", "4"], "\[ScriptCapitalL]"}]}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"S", "'"}], "=", 
+    RowBox[{
+     RowBox[{"\[Integral]", 
+      RowBox[{
+       RowBox[{"dt", "'"}], 
+       RowBox[{"dz", "'"}], 
+       RowBox[{"\[ScriptCapitalL]", "'"}]}]}], "=", 
+     RowBox[{
+      SuperscriptBox["A", "4"], 
+      RowBox[{"\[Integral]", 
+       RowBox[{"dtdz", " ", "\[ScriptCapitalL]"}]}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "\[Rule]", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["A", "2"], "z"}], "\[TildeEqual]", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"1", "+", "\[Delta]"}], ")"}], "2"], "z"}], "\[TildeEqual]", 
+     RowBox[{"z", "+", 
+      RowBox[{"2", "\[Delta]z"}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "\[Rule]", 
+    RowBox[{"At", "\[TildeEqual]", 
+     RowBox[{"t", "+", "\[Delta]t"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["\[PartialD]", 
+     RowBox[{"\[PartialD]", 
+      RowBox[{"t", "'"}]}]], 
+    RowBox[{"=", 
+     RowBox[{
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[PartialD]", "t"}], 
+        RowBox[{"\[PartialD]", 
+         RowBox[{"t", "'"}]}]], 
+       FractionBox["\[PartialD]", 
+        RowBox[{"\[PartialD]", "t"}]]}], "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "\[Delta]"}], ")"}], 
+       FractionBox["\[PartialD]", 
+        RowBox[{"\[PartialD]", 
+         RowBox[{"t", "'"}]}]]}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["\[PartialD]", 
+     RowBox[{"\[PartialD]", 
+      RowBox[{"z", "'"}]}]], 
+    RowBox[{"=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        RowBox[{"2", "\[Delta]"}]}], ")"}], 
+      FractionBox["\[PartialD]", 
+       RowBox[{"\[PartialD]", "z"}]]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", 
+     RowBox[{"t", ",", "z"}], ")"}], "\[Rule]", 
+    RowBox[{
+     RowBox[{"Au", "(", 
+      RowBox[{"At", ",", 
+       RowBox[{
+        SuperscriptBox["A", "2"], "z"}]}], ")"}], "\[TildeEqual]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", "\[Delta]"}], ")"}], 
+      RowBox[{"u", "(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "+", "\[Delta]"}], ")"}], "t"}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"2", "\[Delta]"}]}], ")"}], "z"}]}], ")"}]}], 
+     "\[TildeEqual]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", "\[Delta]"}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}], "+", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "t"}]], "\[Delta]t"}], "+", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "z"}]], "2", "\[Delta]z"}]}], ")"}]}], 
+     "\[TildeEqual]", 
+     RowBox[{
+      RowBox[{"u", "(", 
+       RowBox[{"t", ",", "z"}], ")"}], "+", 
+      RowBox[{"\[Delta]u", "(", 
+       RowBox[{"t", ",", "z"}], ")"}], "+", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[PartialD]", 
+         RowBox[{"u", "(", 
+          RowBox[{"t", ",", "z"}], ")"}]}], 
+        RowBox[{"\[PartialD]", "t"}]], "\[Delta]t"}], "+", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[PartialD]", 
+         RowBox[{"u", "(", 
+          RowBox[{"t", ",", "z"}], ")"}]}], 
+        RowBox[{"\[PartialD]", "z"}]], "2", "\[Delta]z"}]}]}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[CapitalDelta]u", "(", 
+     RowBox[{"t", ",", "z"}], ")"}], "=", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      RowBox[{"t", ",", "z"}], ")"}], "+", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}]}], 
+       RowBox[{"\[PartialD]", "t"}]], "t"}], "+", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}]}], 
+       RowBox[{"\[PartialD]", "z"}]], "2", "z"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[ScriptCapitalL]", "'"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "2"], 
+       RowBox[{"\[Gamma]", "(", 
+        RowBox[{"|", 
+         RowBox[{"u", "(", 
+          RowBox[{"t", ",", "z"}], ")"}], 
+         SuperscriptBox["|", "2"], 
+         RowBox[{
+          RowBox[{"+", "2"}], "\[Delta]"}], "|", 
+         RowBox[{"u", "(", 
+          RowBox[{"t", ",", "z"}], ")"}], "|", 
+         RowBox[{"+", "2"}], "|", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "t"}]], "|", 
+         RowBox[{"\[Delta]t", "+"}], "|", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "z"}]], "|", 
+         RowBox[{"4", "\[Delta]z"}]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"|", 
+         RowBox[{"u", "(", 
+          RowBox[{"t", ",", "z"}], ")"}], 
+         SuperscriptBox["|", "2"], 
+         RowBox[{
+          RowBox[{"+", "2"}], "\[Delta]"}], "|", 
+         RowBox[{"u", "(", 
+          RowBox[{"t", ",", "z"}], ")"}], "|", 
+         RowBox[{"+", "2"}], "|", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "t"}]], "|", 
+         RowBox[{"\[Delta]t", "+"}], "|", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "z"}]], "|", 
+         RowBox[{"4", "\[Delta]z"}]}], ")"}]}], "+", 
+      RowBox[{
+       RowBox[{"\[ImaginaryI]", "(", 
+        RowBox[{"1", "-", 
+         RowBox[{"2", "\[Delta]"}]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["u", "*"], "(", 
+          RowBox[{"t", ",", "z"}], ")"}], "+", 
+         RowBox[{
+          SuperscriptBox["\[Delta]u", "*"], "(", 
+          RowBox[{"t", ",", "z"}], ")"}], "+", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{
+             SuperscriptBox["u", "*"], "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", "t"}]], "\[Delta]t"}], "+", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{
+             SuperscriptBox["u", "*"], "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", "z"}]], "2", "\[Delta]z"}]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "z"}]], 
+           RowBox[{"+", "\[Delta]"}]}], 
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "z"}]], 
+           RowBox[{"+", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{"u", "(", 
+               RowBox[{"t", ",", "z"}], ")"}]}], 
+             RowBox[{
+              RowBox[{"\[PartialD]", "t"}], 
+              RowBox[{"\[PartialD]", "z"}]}]]}]}], "\[Delta]t"}], "+", 
+         RowBox[{
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[PartialD]", "2"], 
+            RowBox[{"u", "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", 
+            SuperscriptBox["z", "2"]}]], "2", "\[Delta]z"}]}], ")"}]}], "+", 
+      RowBox[{
+       FractionBox["1", "2"], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"2", "\[Delta]"}]}], ")"}], 
+       RowBox[{"\[Beta]", "''"}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], 
+           RowBox[{"+", "\[Delta]"}]}], 
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], 
+           RowBox[{"+", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["\[PartialD]", "2"], 
+              RowBox[{"u", "(", 
+               RowBox[{"t", ",", "z"}], ")"}]}], 
+             RowBox[{"\[PartialD]", 
+              SuperscriptBox["t", "2"]}]]}]}], "\[Delta]t"}], "+", 
+         RowBox[{
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[PartialD]", "2"], 
+            RowBox[{"u", "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{
+            RowBox[{"\[PartialD]", "z"}], 
+            RowBox[{"\[PartialD]", "t"}]}]], "2", "\[Delta]z"}]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              SuperscriptBox["u", "*"], "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], 
+           RowBox[{"+", "\[Delta]"}]}], 
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              SuperscriptBox["u", "*"], "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], 
+           RowBox[{"+", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["\[PartialD]", "2"], 
+              RowBox[{
+               SuperscriptBox["u", "*"], "(", 
+               RowBox[{"t", ",", "z"}], ")"}]}], 
+             RowBox[{"\[PartialD]", 
+              SuperscriptBox["t", "2"]}]]}]}], "\[Delta]t"}], "+", 
+         RowBox[{
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[PartialD]", "2"], 
+            RowBox[{
+             SuperscriptBox["u", "*"], "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{
+            RowBox[{"\[PartialD]", "z"}], 
+            RowBox[{"\[PartialD]", "t"}]}]], "2", "\[Delta]z"}]}], ")"}]}]}], 
+     "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        FractionBox["1", "2"], 
+        RowBox[{"\[Gamma]", "(", 
+         RowBox[{"|", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}], 
+          SuperscriptBox["|", "2"], "|", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}], 
+          SuperscriptBox["|", "2"], 
+          RowBox[{
+           RowBox[{"+", "2"}], "\[Delta]"}], "|", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}], 
+          SuperscriptBox["|", "2"], "|", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}], "|", 
+          RowBox[{
+           RowBox[{"+", "2"}], "\[Delta]"}], "|", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}], 
+          SuperscriptBox["|", "2"], "|", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{"u", "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", "t"}]], "|", 
+          RowBox[{"t", "+", "\[Delta]"}], "|", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}], 
+          SuperscriptBox["|", "2"], "|", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{"u", "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", "z"}]], "|", 
+          RowBox[{
+           RowBox[{"4", "z"}], "+", 
+           RowBox[{"2", "\[Delta]"}]}], "|", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}], 
+          SuperscriptBox["|", "2"], "|", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}], "|", 
+          RowBox[{
+           RowBox[{"+", "2"}], "\[Delta]"}], "|", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], "||", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          SuperscriptBox["|", "2"], 
+          RowBox[{"t", "+", 
+           RowBox[{"4", "\[Delta]"}]}], "|", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "z"}]], "||", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          SuperscriptBox["|", "2"], "z"}], ")"}]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"2", "\[Delta]"}]}], ")"}], 
+        RowBox[{
+         SuperscriptBox["\[ImaginaryI]u", "*"], "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", "z"}]]}], "+", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[Delta]\[ImaginaryI]u", "*"], "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", "z"}]]}], "+", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[ImaginaryI]u", "*"], "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{
+          RowBox[{"\[PartialD]", "t"}], 
+          RowBox[{"\[PartialD]", "z"}]}]], "\[Delta]t"}], "+", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[ImaginaryI]u", "*"], "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[PartialD]", "2"], 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", 
+          SuperscriptBox["z", "2"]}]], "2", "\[Delta]z"}], "+", 
+       RowBox[{"\[Delta]\[ImaginaryI]", 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", "z"}]], 
+        RowBox[{
+         SuperscriptBox["u", "*"], "(", 
+         RowBox[{"t", ",", "z"}], ")"}]}], "+", 
+       RowBox[{"\[Delta]\[ImaginaryI]", 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{
+           SuperscriptBox["u", "*"], "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", "t"}]], 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", "z"}]], "t"}], "+", 
+       RowBox[{"\[ImaginaryI]", 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{
+           SuperscriptBox["u", "*"], "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", "z"}]], "2", "\[Delta]\[ImaginaryI]", 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", "z"}]], "z"}], "+", 
+       RowBox[{
+        FractionBox["1", "2"], 
+        RowBox[{"\[Beta]", "''"}], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"2", "\[Delta]"}]}], ")"}], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              SuperscriptBox["u", "*"], "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]]}], "+", 
+          RowBox[{"\[Delta]", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              SuperscriptBox["u", "*"], "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]]}], "+", 
+          RowBox[{"\[Delta]", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[PartialD]", "2"], 
+             RowBox[{
+              SuperscriptBox["u", "*"], "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", 
+             SuperscriptBox["t", "2"]}]], "t"}], "+", 
+          RowBox[{"\[Delta]", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[PartialD]", "2"], 
+             RowBox[{
+              SuperscriptBox["u", "*"], "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{
+             RowBox[{"\[PartialD]", "z"}], 
+             RowBox[{"\[PartialD]", "t"}]}]], "2", "z"}], "+", 
+          RowBox[{"\[Delta]", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              SuperscriptBox["u", "*"], "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]]}], "+", 
+          RowBox[{"\[Delta]", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[PartialD]", "2"], 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", 
+             SuperscriptBox["t", "2"]}]], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              SuperscriptBox["u", "*"], "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], "t"}], "+", 
+          RowBox[{"2", "\[Delta]", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[PartialD]", "2"], 
+             RowBox[{"u", "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{
+             RowBox[{"\[PartialD]", "z"}], 
+             RowBox[{"\[PartialD]", "t"}]}]], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              SuperscriptBox["u", "*"], "(", 
+              RowBox[{"t", ",", "z"}], ")"}]}], 
+            RowBox[{"\[PartialD]", "t"}]], "z"}]}], ")"}]}]}], "=", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "2"], "\[Gamma]"}], "|", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        SuperscriptBox["|", "2"], "|", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        SuperscriptBox["|", "2"], 
+        RowBox[{"+", "\[Gamma]\[Delta]"}], "|", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        SuperscriptBox["|", "2"], "|", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}], "|", 
+        RowBox[{"+", "\[Gamma]\[Delta]"}], "|", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        SuperscriptBox["|", "2"], "|", 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", "t"}]], "|", 
+        RowBox[{"t", "+", 
+         RowBox[{"2", "\[Delta]\[Gamma]"}]}], "|", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        SuperscriptBox["|", "2"], "|", 
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          RowBox[{"u", "(", 
+           RowBox[{"t", ",", "z"}], ")"}]}], 
+         RowBox[{"\[PartialD]", "z"}]], "|", 
+        RowBox[{"z", "+", "\[Gamma]\[Delta]"}], "|", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}], 
+        SuperscriptBox["|", "2"], "|", 
+        RowBox[{"u", "(", 
+         RowBox[{"t", ",", "z"}], ")"}], "|", 
+        RowBox[{"+", "\[Gamma]\[Delta]"}], "|", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "t"}]], "||", 
+         RowBox[{"u", "(", 
+          RowBox[{"t", ",", "z"}], ")"}]}], 
+        SuperscriptBox["|", "2"], 
+        RowBox[{"t", "+", 
+         RowBox[{"2", "\[Gamma]\[Delta]"}]}], "|", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"u", "(", 
+            RowBox[{"t", ",", "z"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "z"}]], "||", 
+         RowBox[{"u", "(", 
+          RowBox[{"t", ",", "z"}], ")"}]}], 
+        SuperscriptBox["|", "2"], 
+        RowBox[{"z", "+", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["\[ImaginaryI]u", "*"], "(", 
+           RowBox[{"t", ",", "z"}], ")"}], 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{"u", "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", "z"}]]}], "+", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["\[ImaginaryI]u", "*"], "(", 
+           RowBox[{"t", ",", "z"}], ")"}], 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{"u", "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{
+            RowBox[{"\[PartialD]", "t"}], 
+            RowBox[{"\[PartialD]", "z"}]}]], "\[Delta]t"}], "+", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["\[ImaginaryI]u", "*"], "(", 
+           RowBox[{"t", ",", "z"}], ")"}], 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[PartialD]", "2"], 
+            RowBox[{"u", "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", 
+            SuperscriptBox["z", "2"]}]], "2", "\[Delta]z"}], "+", 
+         RowBox[{"\[Delta]\[ImaginaryI]", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{
+             SuperscriptBox["u", "*"], "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", "t"}]], 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{"u", "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", "z"}]], "t"}], "+", 
+         RowBox[{"\[ImaginaryI]", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{
+             SuperscriptBox["u", "*"], "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", "z"}]], "2", "\[Delta]\[ImaginaryI]", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{"u", "(", 
+             RowBox[{"t", ",", "z"}], ")"}]}], 
+           RowBox[{"\[PartialD]", "z"}]], "z"}], "+", 
+         RowBox[{
+          FractionBox["1", "2"], 
+          RowBox[{"\[Beta]", "''"}], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "-", 
+               RowBox[{"2", "\[Delta]"}]}], ")"}], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"u", "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                SuperscriptBox["u", "*"], "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]]}], "+", 
+            RowBox[{"\[Delta]", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"u", "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                SuperscriptBox["u", "*"], "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]]}], "+", 
+            RowBox[{"\[Delta]", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"u", "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]], 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["\[PartialD]", "2"], 
+               RowBox[{
+                SuperscriptBox["u", "*"], "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", 
+               SuperscriptBox["t", "2"]}]], "t"}], "+", 
+            RowBox[{"\[Delta]", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"u", "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]], 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["\[PartialD]", "2"], 
+               RowBox[{
+                SuperscriptBox["u", "*"], "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{
+               RowBox[{"\[PartialD]", "z"}], 
+               RowBox[{"\[PartialD]", "t"}]}]], "2", "z"}], "+", 
+            RowBox[{"\[Delta]", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                SuperscriptBox["u", "*"], "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"u", "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]]}], "+", 
+            RowBox[{"\[Delta]", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["\[PartialD]", "2"], 
+               RowBox[{"u", "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", 
+               SuperscriptBox["t", "2"]}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                SuperscriptBox["u", "*"], "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]], "t"}], "+", 
+            RowBox[{"2", "\[Delta]", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["\[PartialD]", "2"], 
+               RowBox[{"u", "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{
+               RowBox[{"\[PartialD]", "z"}], 
+               RowBox[{"\[PartialD]", "t"}]}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                SuperscriptBox["u", "*"], "(", 
+                RowBox[{"t", ",", "z"}], ")"}]}], 
+              RowBox[{"\[PartialD]", "t"}]], "z"}]}], ")"}]}]}]}], 
+       "="}]}]}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[PartialD]", "\[Mu]"], 
+     SuperscriptBox["J", "\[Mu]"]}], "="}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["j", "\[Mu]"], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", "\[ScriptCapitalL]"}], 
+       RowBox[{"\[PartialD]", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["\[PartialD]", "\[Mu]"], "\[Phi]"}], ")"}]}]], 
+      "\[CapitalDelta]\[Phi]"}], "-", 
+     SuperscriptBox["J", "\[Mu]"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQA2IQfaJla6VYyWtH6dSqahAdZ9l+EURvKTZ/CaI/FQp/
+BtGqbSE/QXT9rZr/IJpNepekOJD2eB+kCKIZWqZpgeg3+/JNQPSL8tfmINog
+/ZgNiGaLKfEF0XUHf4eC6BgfqSgwv14gDkyrSZeBaPnT0aISQNq+IVYLRLdY
+3zQA0VGTg71AdMfN/nAQ/UT8bjaINsqaVgSiZfJ6G0B0nkp3J4iW25S3AUQn
+HYzfDqLXQunfU87tA9HRv8L3g+hNei+PguhuTs0HINrs/ERTSSA97eEGML0j
+PWYWiK49VwamP68JnQ+iG6Q8F4JoT90VS0H0yszLK0B0jIWUrBTI/z4FmiAa
+APLdobc=
+  "]]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1531,8 +2471,9 @@ Cell[BoxData[
                   None, Evaluator -> Automatic, Method -> "Preemptive"], 
                  Alignment -> {Center, Center}, ImageSize -> 
                  Dynamic[{
-                   Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                 GraphicsBox[{{}, {
                    Hue[0.67, 0.6, 0.6], 
                    Directive[
@@ -1560,8 +2501,9 @@ Cell[BoxData[
                   GridLines -> {None, None}, GridLinesStyle -> Directive[
                     GrayLevel[0.5, 0.4]], ImageSize -> 
                   Dynamic[{
-                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}], Method -> {}, 
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}], Method -> {}, 
                   PlotRange -> {{-1., 1.}, {-1., 1.}}, PlotRangeClipping -> 
                   True, PlotRangePadding -> {{
                     Scaled[0.02], 
@@ -1603,8 +2545,9 @@ Cell[BoxData[
                   None, Evaluator -> Automatic, Method -> "Preemptive"], 
                  Alignment -> {Center, Center}, ImageSize -> 
                  Dynamic[{
-                   Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                 GraphicsBox[{{}, {
                    Hue[0.67, 0.6, 0.6], 
                    Directive[
@@ -1632,8 +2575,9 @@ Cell[BoxData[
                   GridLines -> {None, None}, GridLinesStyle -> Directive[
                     GrayLevel[0.5, 0.4]], ImageSize -> 
                   Dynamic[{
-                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}], Method -> {}, 
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}], Method -> {}, 
                   PlotRange -> {{-1., 1.}, {-1., 1.}}, PlotRangeClipping -> 
                   True, PlotRangePadding -> {{
                     Scaled[0.02], 
@@ -3508,10 +4452,10 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{767, 872},
-WindowMargins->{{147, Automatic}, {25, Automatic}},
-Magnification:>1.2 Inherited,
-FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+WindowSize->{1301, 744},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification->1.5,
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -3526,110 +4470,121 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 124, 1, 201, "Title"],
+Cell[580, 22, 124, 1, 144, "Title"],
 Cell[CellGroupData[{
-Cell[729, 27, 97, 1, 88, "Chapter"],
-Cell[829, 30, 26369, 773, 1408, "Text"]
+Cell[729, 27, 97, 1, 101, "Chapter"],
+Cell[CellGroupData[{
+Cell[851, 32, 103, 1, 68, "Subsection"],
+Cell[957, 35, 26469, 774, 1924, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27235, 808, 162, 2, 88, "Chapter"],
-Cell[27400, 812, 481, 8, 81, "Text"],
-Cell[27884, 822, 1214, 31, 77, "Input"],
+Cell[27463, 814, 114, 1, 68, "Subsection"],
+Cell[27580, 817, 1089, 33, 161, "Text"],
 Cell[CellGroupData[{
-Cell[29123, 857, 102, 1, 58, "Subsection"],
-Cell[CellGroupData[{
-Cell[29250, 862, 1596, 44, 146, "Input"],
-Cell[30849, 908, 294, 4, 36, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[31180, 917, 1181, 33, 116, "Input"],
-Cell[32364, 952, 331, 8, 53, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[32744, 966, 104, 1, 58, "Subsection"],
-Cell[32851, 969, 150, 2, 35, "Text"],
-Cell[CellGroupData[{
-Cell[33026, 975, 2770, 75, 221, "Input"],
-Cell[35799, 1052, 310, 4, 36, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[36146, 1061, 1946, 48, 110, "Input"],
-Cell[38095, 1111, 1866, 55, 166, "Output"]
-}, Open  ]],
-Cell[39976, 1169, 701, 22, 44, "Text"],
-Cell[CellGroupData[{
-Cell[40702, 1195, 1678, 46, 180, "Input"],
-Cell[42383, 1243, 532, 14, 60, "Output"],
-Cell[42918, 1259, 944, 30, 53, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[43899, 1294, 264, 7, 36, "Input"],
-Cell[44166, 1303, 333, 10, 53, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[44536, 1318, 242, 6, 36, "Input"],
-Cell[44781, 1326, 8535, 150, 284, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[53353, 1481, 1102, 28, 88, "Input"],
-Cell[54458, 1511, 9139, 183, 84, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[63634, 1699, 376, 10, 36, "Input"],
-Cell[64013, 1711, 1804, 40, 284, "Output"]
+Cell[28694, 854, 92, 1, 55, "Subsubsection"],
+Cell[28789, 857, 30277, 884, 1383, "Text"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[65878, 1758, 143, 1, 151, "Chapter"],
-Cell[66024, 1761, 2586, 83, 373, "Text"],
+Cell[59127, 1748, 162, 2, 101, "Chapter"],
+Cell[59292, 1752, 481, 8, 82, "Text"],
+Cell[59776, 1762, 1214, 31, 102, "Input"],
 Cell[CellGroupData[{
-Cell[68635, 1848, 474, 14, 75, "Input"],
-Cell[69112, 1864, 3122, 86, 296, "Output"]
+Cell[61015, 1797, 102, 1, 68, "Subsection"],
+Cell[CellGroupData[{
+Cell[61142, 1802, 1596, 44, 180, "Input"],
+Cell[62741, 1848, 294, 4, 45, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[72271, 1955, 312, 7, 36, "Input"],
-Cell[72586, 1964, 148, 2, 36, "Output"]
-}, Open  ]],
-Cell[72749, 1969, 950, 26, 121, "Text"],
-Cell[CellGroupData[{
-Cell[73724, 1999, 509, 14, 56, "Input"],
-Cell[74236, 2015, 1975, 66, 158, "Output"]
-}, Open  ]],
-Cell[76226, 2084, 624, 22, 131, "Text"],
-Cell[CellGroupData[{
-Cell[76875, 2110, 990, 30, 115, "Input"],
-Cell[77868, 2142, 133, 2, 36, "Output"]
+Cell[63072, 1857, 1181, 33, 110, "Input"],
+Cell[64256, 1892, 331, 8, 65, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[78038, 2149, 925, 23, 82, "Input"],
-Cell[78966, 2174, 1352, 38, 63, "Output"]
-}, Open  ]],
-Cell[80333, 2215, 533, 18, 81, "Text"],
+Cell[64636, 1906, 104, 1, 68, "Subsection"],
+Cell[64743, 1909, 150, 2, 49, "Text"],
 Cell[CellGroupData[{
-Cell[80891, 2237, 594, 15, 40, "Input"],
-Cell[81488, 2254, 2028, 67, 158, "Output"]
+Cell[64918, 1915, 2770, 75, 293, "Input"],
+Cell[67691, 1992, 310, 4, 45, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[83553, 2326, 1838, 60, 216, "Input"],
-Cell[85394, 2388, 376, 11, 57, "Output"]
+Cell[68038, 2001, 1946, 48, 172, "Input"],
+Cell[69987, 2051, 1866, 55, 155, "Output"]
+}, Open  ]],
+Cell[71868, 2109, 701, 22, 64, "Text"],
+Cell[CellGroupData[{
+Cell[72594, 2135, 1678, 46, 170, "Input"],
+Cell[74275, 2183, 532, 14, 45, "Output"],
+Cell[74810, 2199, 944, 30, 65, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[85807, 2404, 93, 1, 80, "Subchapter"],
-Cell[85903, 2407, 1463, 34, 64, "Input"],
-Cell[87369, 2443, 346, 9, 36, "Input"],
-Cell[87718, 2454, 279, 6, 36, "Input"],
-Cell[88000, 2462, 1127, 29, 64, "Input"],
-Cell[CellGroupData[{
-Cell[89152, 2495, 218, 5, 36, "Input"],
-Cell[89373, 2502, 4502, 110, 209, "Output"]
+Cell[75791, 2234, 264, 7, 45, "Input"],
+Cell[76058, 2243, 333, 10, 65, "Output"]
 }, Open  ]],
-Cell[93890, 2615, 2971, 80, 245, "Input"],
-Cell[96864, 2697, 35527, 788, 2624, "Input"],
 Cell[CellGroupData[{
-Cell[132416, 3489, 246, 6, 36, "Input"],
-Cell[132665, 3497, 261, 7, 36, "Output"]
+Cell[76428, 2258, 242, 6, 45, "Input"],
+Cell[76673, 2266, 8535, 150, 353, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[85245, 2421, 1102, 28, 81, "Input"],
+Cell[86350, 2451, 9231, 187, 96, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[95618, 2643, 376, 10, 45, "Input"],
+Cell[95997, 2655, 1804, 40, 352, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[97862, 2702, 143, 1, 101, "Chapter"],
+Cell[98008, 2705, 2586, 83, 524, "Text"],
+Cell[CellGroupData[{
+Cell[100619, 2792, 474, 14, 110, "Input"],
+Cell[101096, 2808, 3122, 86, 243, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[104255, 2899, 312, 7, 45, "Input"],
+Cell[104570, 2908, 148, 2, 45, "Output"]
+}, Open  ]],
+Cell[104733, 2913, 950, 26, 166, "Text"],
+Cell[CellGroupData[{
+Cell[105708, 2943, 509, 14, 85, "Input"],
+Cell[106220, 2959, 1975, 66, 165, "Output"]
+}, Open  ]],
+Cell[108210, 3028, 624, 22, 182, "Text"],
+Cell[CellGroupData[{
+Cell[108859, 3054, 990, 30, 136, "Input"],
+Cell[109852, 3086, 133, 2, 45, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[110022, 3093, 925, 23, 124, "Input"],
+Cell[110950, 3118, 1352, 38, 79, "Output"]
+}, Open  ]],
+Cell[112317, 3159, 533, 18, 139, "Text"],
+Cell[CellGroupData[{
+Cell[112875, 3181, 594, 15, 52, "Input"],
+Cell[113472, 3198, 2028, 67, 165, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[115537, 3270, 1838, 60, 317, "Input"],
+Cell[117378, 3332, 376, 11, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[117791, 3348, 93, 1, 96, "Subchapter"],
+Cell[117887, 3351, 1463, 34, 82, "Input"],
+Cell[119353, 3387, 346, 9, 45, "Input"],
+Cell[119702, 3398, 279, 6, 45, "Input"],
+Cell[119984, 3406, 1127, 29, 52, "Input"],
+Cell[CellGroupData[{
+Cell[121136, 3439, 218, 5, 45, "Input"],
+Cell[121357, 3446, 4502, 110, 244, "Output"]
+}, Open  ]],
+Cell[125874, 3559, 2971, 80, 295, "Input"],
+Cell[128848, 3641, 35527, 788, 3772, "Input"],
+Cell[CellGroupData[{
+Cell[164400, 4433, 246, 6, 53, "Input"],
+Cell[164649, 4441, 261, 7, 53, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
